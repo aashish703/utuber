@@ -3,14 +3,26 @@
 
 <head>
 	<title>Harrison Kinsley</title>
+	{% load staticfiles %}
+	       <link rel="shortcut icon" href="{% static 'title.ico' %}" />
+  <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}" type = "text/css"/>
+  <script src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'bootstrap-3.3.7-dist/jquery.min.js' %}"></script>
+
 	<meta charset="utf-8" />
 </head>
 
-<body class="body" style="background-color:#f6f6f6">
-	<div>
+<body >
+ <nav class="navbar navbar-inverse" style="height:10px">
+ <div class="row">
+  <div class="col-sm-3"><div style="border:2px dotted red;background-image:url('{% static 'title.ico' %}');background-size:contain;">Utubers</div></div>
+  <div class="col-sm-6"><input type="text"></div>
+  <div class="col-sm-3">.col-sm-3</div>
+</div>
+ </nav>
 	   {% block content %}
 	   {% endblock %}
-	</div>
+
 </body>
 
 </html>
