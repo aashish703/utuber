@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Harrison Kinsley</title>
+	<title>Utuber</title>
 	{% load staticfiles %}
 	       <link rel="shortcut icon" href="{% static 'title.ico' %}" />
   <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}" type = "text/css"/>
@@ -13,11 +13,28 @@
 </head>
 
 <body >
- <nav class="navbar navbar-inverse" style="height:10px">
- <div class="row">
-  <div class="col-sm-3"><div style="border:2px dotted red;background-image:url('{% static 'title.ico' %}');background-size:contain;">Utubers</div></div>
-  <div class="col-sm-6"><input type="text"></div>
+ <nav class="navbar navbar-inverse "id="nav" style="height:10px">
+ <div class="row container-fluid">
+    <div class="navbar-header col-sm-3">
+    <a class="navbar-brand"style="background-image:url('{% static 'title.ico' %}');margin-left:2px;background-repeat:no-repeat;background-size: 50px 50px;" href="#">&nbsp&nbsp&nbsp&nbsp</a>
+    </div>
+  <div class="col-sm-7"style="padding-top:8px;">
+<input type="text"style="width:80%;padding:5px;border: 1px dotted"><input type="button"value="search"style="border: 1px dotted;padding:5px;"></div>
+  <div class="col-sm-2">
+ddd</div>
+
+
+  <!-- </div>
+     <div class="row container">
+  <div class="col-sm-3">
+      <div class="row"style="border:2px dotted red;">
+      <div class="col-sm-6"style="border:2px dotted blue;background-image:url('{% static 'title.ico' %}');">
+ssssssssssssss
+          </div><div class="col-sm-6">Utubers</div></div>
+     </div>
+      <div class="col-sm-6"><input type="text"></div>
   <div class="col-sm-3">.col-sm-3</div>
+</div>-->
 </div>
  </nav>
 	   {% block content %}
