@@ -1,18 +1,22 @@
 from django.http import HttpResponseRedirect
 from django.http.response import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import ContactForm
 
 def index(request):
     return render(request, 'personal/home.html')
 def search(request):
-    return render(request,'personal/search.html')
+    if request.method == 'POST':
+        x = request.POST['usearch']
+        return redirect("https://www.youtube.com/results?search_query={}".format(x))
+    else:
+        return render(request,'personal/search.html')
 
 
 def get_name(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
+        # bhouri create a form instance and populate it with data from the request:
         form = ContactForm(request.POST)
         # check whether it's valid:
         if form.is_valid():
